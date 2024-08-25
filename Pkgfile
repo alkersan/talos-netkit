@@ -7,8 +7,8 @@ vars:
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
   linux_version: 6.10.6
-  linux_sha256: 121bed240767e4a0959c1609e78eeaaf3e0620d9d1a5ed1f6e36bdf609c4f179
-  linux_sha512: 1f70ad29581e92cb1979e0d50c2db3933c38d6c645f5f586794dab86cdf086166f63c5bec952f6bbc2ee7fe71ee75e16342b7581f9c530e5ac0af6b869f39ede
+  linux_sha256: e0d50d5b74f8599375660e79f187af7493864dba5ff6671b14983376a070b3d1
+  linux_sha512: 991ec7c7d2d490cb90b182a29e892dae586918eee7f3ff4b6e26f4ff9b31b6d7a31cdc31d25ca12243ecab59787aad75f0056b2fbe6997d0dfd68c357e7703af
 
 labels:
   org.opencontainers.image.source: https://github.com/alkersan/talos-netkit
