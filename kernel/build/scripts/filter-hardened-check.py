@@ -31,6 +31,7 @@ IGNORE_VIOLATIONS = {
     'CONFIG_SECURITY_SELINUX_DEVELOP', # SELinux enabled, but permissive unless enforcing=1. TODO: force enforcing mode when complete
     'CONFIG_SPECULATION_MITIGATIONS', # Renamed in the kernel to 'CONFIG_CPU_MITIGATIONS'
     'CONFIG_EFI_DISABLE_PCI_DMA', # enabling this breaks boot with no visible error messages to debug (https://github.com/siderolabs/talos/issues/8743)
+    'CONFIG_UBSAN_SANITIZE_ALL', # was removed after 6.8
 }
 
 """
@@ -41,7 +42,9 @@ IGNORE_VIOLATIONS_BY_ARCH = {
         'CONFIG_ARM64_BTI_KERNEL', # can't seem to enable this, probably because we're using gcc, see https://github.com/siderolabs/pkgs/issues/918
         'CONFIG_UNWIND_PATCH_PAC_INTO_SCS', # this is a Clang feature, we use gcc
     },
-    'amd64': {},
+    'amd64': {
+        'CONFIG_AMD_IOMMU_V2', # was removed after 6.6
+    },
 }
 
 def main():
